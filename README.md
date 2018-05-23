@@ -2,7 +2,7 @@
 
 This is a sample solution of how machine learning models built with [ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) framework can be exposed to clients via an [ASP.NET Core](https://www.microsoft.com/net/learn/apps/web) Web API that has been packaged into a [Docker](https://www.docker.com/) container and deployed to [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/) service. A more detailed walk-through can be found in this blog post at the following [link](http://luisquintanilla.me/2018/05/11/deploy-netml-docker-aci/)
 
-## Dependencies
+## Requirements
 
 [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)  
 [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)  
@@ -12,7 +12,7 @@ This is a sample solution of how machine learning models built with [ML.NET](htt
 ## Project Instructions
 
 1. Build The Project
-2. Create The Model
+2. Create Model
 3. Test Web API Locally
 4. Package Web API
 5. Test Web API Docker Image Locally
@@ -36,7 +36,7 @@ dotnet restore
 dotnet build
 ```
 
-## 2. Create The Model
+## 2. Create Model
 
 Before we start our API, we need to create our machine learning model. This is done via the `model` project.
 
@@ -46,9 +46,9 @@ dotnet run -p model/model.csproj
 
 ## 3. Test Web API Locally
 
-The `model` project should have created a file called `model.zip` inside of it's directory. Copy `model.zip` file inside the `model` project directory to the `api` directory.
+The `model` project should have created a file called `model.zip` inside of its directory. Copy `model.zip` file inside the `model` project directory to the `mlnetacidemo` root solution directory.
 
-### Start The Web API
+### Start Web API
 ```bash
 dotnet run -p api/api.csproj
 ```
