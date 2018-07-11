@@ -46,7 +46,7 @@ dotnet run -p model/model.csproj
 
 ## 3. Test Web API Locally
 
-The `model` project should have created a file called `model.zip` inside of its directory. Copy `model.zip` file inside the `model` project directory to the `mlnetacidemo` root solution directory.
+The `model` project should have created a file called `model.zip` inside of its directory. Copy `model.zip` file inside the `model` project directory to the `api` project directory.
 
 ### Start Web API
 ```bash
