@@ -1,4 +1,5 @@
 using Microsoft.ML;
+using Microsoft.ML.Data;
 using Microsoft.ML.Runtime.Api;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
@@ -14,7 +15,8 @@ namespace model
         public static async Task<PredictionModel<IrisData,IrisPrediction>> Train(LearningPipeline pipeline, string dataPath, string modelPath)
         {
             // Load Data
-            pipeline.Add(new TextLoader<IrisData>(dataPath,separator:","));   
+            
+            pipeline.Add(new TextLoader(dataPath).CreateFrom<IrisData>(separator:','));   
 
             // Transform Data
             // Assign numeric values to text in the "Label" column, because 
