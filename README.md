@@ -81,7 +81,7 @@ docker build -t <DOCKERUSERNAME>/<IMAGENAME>:latest .
 Using your DockerHub username and recently created image name from the last example, enter the following command to start the Docker image locally and bind it to port 5000.
 
 ```bash
-docker run -d -p 5000:80 <DOCKERUSERNAME>/<IMAGENAME>:latest
+docker run -p 5000:80 <DOCKERUSERNAME>/<IMAGENAME>:latest
 ```
 
 ### Send Test Request
@@ -96,6 +96,8 @@ Use POSTMAN or Insomnia REST Clients to send a `POST` request to `http://localho
 	"PetalWidth": 5.1,
 }
 ```
+
+To stop the container, use `Ctrl + C`
 
 ## 6. Push Docker Image to Docker Hub
 
