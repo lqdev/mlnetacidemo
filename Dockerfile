@@ -14,6 +14,6 @@ RUN dotnet publish -c release -o out
 
 FROM microsoft/aspnetcore:2.0 AS runtime
 WORKDIR /app
-COPY model.zip .
+COPY api/model.zip .
 COPY --from=build /app/api/out ./
 ENTRYPOINT ["dotnet", "api.dll"]
